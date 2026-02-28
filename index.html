@@ -9,49 +9,158 @@
 
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="80" tabindex="0">
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+<!-- Navigation -->
+<nav id="mainNav" class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
     <div class="container">
-        <a class="navbar-brand fw-bold" href="#">Michael Tsegaye</a>
+        <a class="navbar-brand fw-bold" href="#home">Michael Tsegaye</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">Info</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#hobbies">Hobbies</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
     </div>
 </nav>
 
-<div class="container mt-5">
-    <div class="row justify-content-center">
-        <div class="col-md-10 text-center hero-section shadow-sm rounded p-5">
-            <h1 class="display-4 fw-bold">Hello, I'm Michael</h1>
-            <p class="lead text-primary fw-semibold">Aspiring Frontend Developer</p>
-            <hr class="my-4">
-
-            <div class="row text-start mt-4">
-                <div class="col-md-7">
-                    <h3 class="h5 fw-bold">About Me</h3>
-                    <p>I am a 26-year-old student from <strong>Holon, Israel</strong>. Currently, I am pursuing my B.Sc., now in my 3rd and final semester. My goal is to master the art of client-side development and build seamless user experiences.</p>
+<!-- Main content -->
+<main>
+    <!-- Hero / Landing -->
+    <section id="home" class="hero-section d-flex align-items-center text-center">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="card shadow-lg rounded-4 p-5 bg-white">
+                        <h1 class="display-1 fw-bold name-heading mb-3">Michael Tsegaye</h1>
+                        <p class="lead text-primary fw-semibold fs-4">Aspiring Frontend Developer — building clean and responsive user experiences</p>
+                        <div class="mt-4">
+                            <a href="#about" class="btn btn-primary btn-lg me-2">Learn More</a>
+                            <a href="#contact" class="btn btn-outline-secondary btn-lg">Contact Me</a>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="col-md-5">
-                    <h3 class="h5 fw-bold">Hobbies</h3>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item bg-transparent">🏀 Basketball</li>
-                        <li class="list-group-item bg-transparent">🥾 Hiking</li>
-                        <li class="list-group-item bg-transparent">🎵 Music</li>
-                        <li class="list-group-item bg-transparent">👨‍👩‍👧‍👦 Family</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="mt-5">
-                <a href="mailto:michaelts@outlook.co.il" class="btn btn-primary px-4 py-2 shadow-sm">Contact Me</a>
-                <a href="#" class="btn btn-outline-secondary px-4 py-2 ms-2">Download CV</a>
             </div>
         </div>
-    </div>
-</div>
+    </section>
+
+    <!-- About / Info -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="card p-4 shadow-sm rounded-4">
+                        <h2 class="h3 fw-bold">About Me</h2>
+                        <p>I am a 26-year-old student from <strong>Holon, Israel</strong>. Currently pursuing my B.Sc., now in my 3rd and final semester. My studies focus on computer science fundamentals and web technologies. I am passionate about client-side development, user experience and clean responsive design. I enjoy learning modern JavaScript frameworks and improving accessibility and performance in the applications I build.</p>
+                        <hr>
+                        <h3 class="h6 fw-bold">Quick Facts</h3>
+                        <ul>
+                            <li>Location: Holon, Israel</li>
+                            <li>Education: B.Sc. (in progress)</li>
+                            <li>Interests: Web development, UI/UX, performance optimization</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hobbies -->
+    <section id="hobbies" class="py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="card p-4 shadow-sm rounded-4">
+                        <h2 class="h3 fw-bold">Hobbies & Interests</h2>
+                        <p class="mb-3">When I step away from the keyboard I enjoy activities that recharge me and keep my mind sharp.</p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="list-unstyled">
+                                    <li>🏀 Basketball — team sport and fitness</li>
+                                    <li>🥾 Hiking — nature and trails</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="list-unstyled">
+                                    <li>🎵 Music — listening and discovering new artists</li>
+                                    <li>👨‍👩‍👧‍👦 Family time — quality moments with loved ones</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card p-4 shadow-sm rounded-4">
+                        <h2 class="h3 fw-bold">Contact Me</h2>
+                        <p class="mb-3">Feel free to reach out — email is the best way to get in touch.</p>
+
+                        <form action="mailto:michaelts@outlook.co.il" method="get" enctype="text/plain">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Your name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com">
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" name="message" rows="4" placeholder="Tell me about your project or question..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send Email</button>
+                            <a href="mailto:michaelts@outlook.co.il" class="btn btn-outline-secondary ms-2">Open Mail App</a>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
 
 <footer class="text-center py-4 mt-5 text-muted">
     <small>&copy; 2026 Michael Tsegaye | Built with Bootstrap</small>
 </footer>
+
+<!-- Bootstrap JS bundle (required for collapse and scrollspy) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Small script to close navbar on link click (mobile) -->
+<script>
+    (function () {
+        var navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+        var navbarCollapse = document.querySelector('.navbar-collapse');
+        navLinks.forEach(function (l) {
+            l.addEventListener('click', function () {
+                if (window.getComputedStyle(document.querySelector('.navbar-toggler')).display !== 'none') {
+                    var collapse = new bootstrap.Collapse(navbarCollapse, {toggle: false});
+                    collapse.hide();
+                }
+            });
+        });
+    })();
+</script>
 
 </body>
 </html>
