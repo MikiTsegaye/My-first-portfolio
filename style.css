@@ -1,0 +1,38 @@
+/* General Page Styling */
+body {
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+/* Card Styling */
+.hero-section {
+    background: #ffffff;
+    border: none;
+    border-radius: 15px !important; /* Overriding Bootstrap default */
+}
+
+/* Typography */
+h1 {
+    color: #212529;
+}
+
+.lead {
+    font-size: 1.4rem;
+}
+
+/* Customizing the List Group for Hobbies */
+.list-group-item {
+    border-left: none;
+    border-right: none;
+    padding-left: 0;
+}
+
+/* Adding a hover effect to the contact button */
+.btn-primary {
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+    background-color: #0b5ed7;
+}
