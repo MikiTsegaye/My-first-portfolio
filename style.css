@@ -77,3 +77,25 @@ h2 {
     letter-spacing: -1px;
     color: var(--dark);
 }
+/* Fix for Centering: Ensures sections don't hide behind the fixed navbar */
+section {
+    scroll-margin-top: 70px; /* Adjust this to match your navbar height */
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+/* Fix for Always Blue: Specificity tweak for ScrollSpy */
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.55) !important;
+    transition: color 0.3s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link.active {
+    color: var(--accent) !important; /* Only the truly active section will be blue */
+    font-weight: 600;
+}
+
+/* Optional: Smooth scrolling for a better feel when clicking categories */
+html {
+    scroll-behavior: smooth;
+}
