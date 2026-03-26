@@ -1,18 +1,26 @@
 :root {
     --bg: #ffffff;
-    --muted: #4b5563;
     --accent: #2563eb;
     --dark: #111827;
+}
+
+/* Scroll Centering Fix */
+section {
+    scroll-margin-top: 85px; 
+    padding: 6rem 0;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
     background-color: var(--bg);
     color: var(--dark);
     font-family: 'Inter', -apple-system, sans-serif;
-    line-height: 1.6;
 }
 
-/* Engineering Hero Grid */
+/* Hero Section Styles */
 .hero-section {
     padding: 10rem 0;
     background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
@@ -20,82 +28,55 @@ body {
 }
 
 .name-heading {
-    color: var(--dark);
     font-size: clamp(2.5rem, 8vw, 5rem);
     letter-spacing: -2px;
-    text-shadow: 0 10px 30px rgba(37, 99, 235, 0.1);
 }
 
-/* Skills Cloud */
-.skill-badge {
-    background-color: #f1f5f9;
-    color: #334155;
-    border: 1px solid #e2e8f0;
-    font-family: monospace;
-    font-weight: 500;
-    padding: 8px 12px;
+/* Nav Link Color Fix */
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.6) !important;
 }
 
-/* Project Cards */
+.navbar-dark .navbar-nav .nav-link.active {
+    color: var(--accent) !important;
+    font-weight: 700;
+}
+
+/* Project Card Hover & Logic */
 .project-card {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     border: 1px solid #f1f5f9 !important;
+    display: flex;
+    flex-direction: column;
 }
 
 .project-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08) !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1) !important;
     border-color: var(--accent) !important;
 }
 
-.project-card code {
-    font-size: 0.8rem;
+.tag {
+    font-size: 0.72rem;
     color: var(--accent);
     background: #eff6ff;
-    padding: 4px 8px;
-    border-radius: 4px;
-    margin-right: 5px;
-}
-
-/* Navigation Customization */
-.navbar-brand {
-    letter-spacing: 1px;
-}
-
-.nav-link {
-    font-size: 0.95rem;
-    margin: 0 5px;
-}
-
-.nav-link.active {
-    color: var(--accent) !important;
+    padding: 4px 10px;
+    border-radius: 6px;
+    margin-right: 4px;
+    font-family: monospace;
     font-weight: 600;
 }
 
-/* Section Headings */
-h2 {
-    letter-spacing: -1px;
-    color: var(--dark);
-}
-/* Fix for Centering: Ensures sections don't hide behind the fixed navbar */
-section {
-    scroll-margin-top: 70px; /* Adjust this to match your navbar height */
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+/* Skill Sections */
+.skill-card {
+    border-top: 4px solid var(--accent);
 }
 
-/* Fix for Always Blue: Specificity tweak for ScrollSpy */
-.navbar-dark .navbar-nav .nav-link {
-    color: rgba(255, 255, 255, 0.55) !important;
-    transition: color 0.3s ease;
-}
-
-.navbar-dark .navbar-nav .nav-link.active {
-    color: var(--accent) !important; /* Only the truly active section will be blue */
-    font-weight: 600;
-}
-
-/* Optional: Smooth scrolling for a better feel when clicking categories */
-html {
-    scroll-behavior: smooth;
+.skill-badge {
+    background-color: #f8fafc;
+    color: #475569;
+    border: 1px solid #e2e8f0;
+    font-family: monospace;
+    padding: 8px 12px;
+    font-size: 0.85rem;
 }
